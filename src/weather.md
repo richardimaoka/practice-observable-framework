@@ -1,5 +1,5 @@
 # Weather report
 
 ```js
-display(1 + 2);
+display(1 + Math.random());
 ```
