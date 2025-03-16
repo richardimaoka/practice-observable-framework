@@ -1,5 +1,23 @@
 # Weather report
 
+
 ```js
-display(1 + Math.random());
+
+const forecast = await FileAttachment("./data/forecast.json").json();
+display(
+  Plot.plot({
+    title: "Hourly temperature forecast",
+    x: {type: "utc", ticks: "day", label: null},
+    y: {grid: true, inset: 10, label: "Degrees (F)"},
+    marks: [
+      Plot.lineY(forecast.properties.periods, {
+        x: "startTime",
+        y: "temperature",
+        z: null, // varying color, not series
+        stroke: "temperature",
+        curve: "step-after"
+      })
+    ]
+  })
+);
 ```
