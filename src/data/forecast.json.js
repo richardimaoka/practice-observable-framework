@@ -1,5 +1,5 @@
-const longitude = -122.47;
-const latitude = 37.8;
+const longitude = -77.04;
+const latitude = 38.9;
 
 async function json(url) {
   const response = await fetch(url);
